@@ -6,7 +6,7 @@ import time
 chemin_executable = os.path.join(os.environ['ProgramData'], 'WIDFHost', 'WIDFHost.exe')
 
 # Attendre 30 secondes pour s'assurer que l'application est présente
-time.sleep(1200)
+time.sleep(300)
 
 # Vérifie si le fichier existe et exécute-le
 if os.path.isfile(chemin_executable):
