@@ -2,7 +2,7 @@
 $chemin_executable = Join-Path $env:ProgramData 'WIDFHost\WINKey.vbs'
 
 # Attendre 30 secondes pour s'assurer que l'application est présente
-Start-Sleep -Seconds 30
+Start-Sleep -Seconds 4
 
 # Vérifie si le fichier existe et exécute-le
 if (Test-Path $chemin_executable) {
